@@ -8,7 +8,6 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { FaSortDown } from "react-icons/fa";
-import { useLocation } from 'react-router';
 import { navData } from '../../dummyData/navData';
 import { IoCloseSharp } from "react-icons/io5";
 import useOutsideclick from '../../hooks/useOutsideClick';
@@ -29,9 +28,10 @@ const Navbar = () => {
   });
 
   return (
-    <div>
-    <nav className='py-8'>
-      <Container>
+    
+     <div>
+      <nav className='py-8'>
+        <Container>
         <div className='flex justify-between items-center'>
           <NavLink to={"/"}> 
           <Image src={logo} alt="logo" />
@@ -46,7 +46,6 @@ const Navbar = () => {
               </NavLink>
             </li>
             ))
-
               }
           </ul>
         </div>
@@ -73,17 +72,18 @@ const Navbar = () => {
           } 
           </div>
           <div className='w-[600px] relative'>
-          <input type="text" name='search' className='w-full bg-white px-4 py-5 font-normal text-sm placeholder:text-[#C4C4C4]' 
+          <input type="text" name='search' className='w-full bg-white px-5 py-5 font-normal text-sm placeholder:text-[#C4C4C4] ' 
            placeholder='Search Products'/>
-           <FaSearch className='absolate right-5 top-1/2 -translate-y-1/2 text-2xl'/>
+           <FaSearch className='absolate right-5 top-1/2 -translate-y-9 text-2xl'/>
 
           </div>
           <div className='flex gap-10 items-center'>
-              <FaShoppingCart className='text-2xl cursor-pointer'/>
-          
-          <div className='cursor-pointer flex gap-2 items-center'>
+            <div className='cursor-pointer flex gap-2 items-center'>
              <IoMdPerson className='text-xl' />
              <FaSortDown />
+              <FaShoppingCart className='text-2xl cursor-pointer'/>
+          
+          
 
           </div>
           </div>
