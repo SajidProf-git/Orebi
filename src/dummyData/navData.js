@@ -27,3 +27,16 @@ export const navData = [
     url: "/journal"
   }, 
 ]
+
+export const profileDropdownData = [
+  {
+    id: 1,
+    label: "Profile",
+    url: "/profile"
+  },
+  {
+    id: 2,
+    label: "Dashboard",
+    url: "/dashboard"
+  }
+]
