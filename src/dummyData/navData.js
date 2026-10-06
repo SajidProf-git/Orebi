@@ -1,4 +1,4 @@
-export const navData = [
+export const NavData = [
   {
     id: 1,
     label: "Home",

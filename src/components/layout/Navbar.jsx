@@ -8,11 +8,11 @@ import { FaShoppingCart } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { FaSortDown } from "react-icons/fa";
-import { navData } from '../../dummyData/navData';
+import { NavData } from '../../dummyData/NavData';
 import { IoCloseSharp } from "react-icons/io5";
 import { useLocation } from 'react-router';
 import useOutsideclick from '../../hooks/useOutsideClick';
-import { profileDropdownData } from '../../dummyData/navData';
+import { profileDropdownData } from '../../dummyData/NavData';
 import { MdLogin } from "react-icons/md";
 
 
@@ -46,7 +46,7 @@ const Navbar = () => {
           <Image src={logo} alt="logo" />
           </NavLink>
           <ul className='flex justify-end gap-10'>
-              {navData.map((item,index)=>(
+              {NavData.map((item,index)=>(
             <li key={index}>
               <NavLink to={item.url} className={`${item.url == pathname.pathname ? 'text-red-600' : 'text-0black'}`}>
                   {
