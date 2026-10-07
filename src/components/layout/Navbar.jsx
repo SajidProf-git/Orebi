@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className='bg-gray_1 py'>
           <Container>
           <div className='flex justify-between items-center'>
-          <div ref={dropdownRef} className='relative'>
+          <div useref={dropdownRef} className='relative'>
             {showDropdown ?
               <IoCloseSharp onClick={()=>setShowDropdown(!showDropdown)} className='text-2xl cursor-pointer' />
               :
@@ -84,11 +84,10 @@ const Navbar = () => {
           <input type="text" name='search' className='relative py-4.25 px-5 bg-white w-full h-full font-normal font-dm-sans placeholder:text-[#C4C4C4] ' 
            placeholder='Search Products'/>
            <FaSearch className='absolate left-5 text-2xl'/>
-
           </div>
           <div className='flex gap-10 items-center'>
             {isLogin ?
-                <div ref={profileDropdownData} className='relative'>
+                <div useref={profileDropdownData} className='relative'>
               <div onClick={()=>setShowProfileDropdown(!showProfileDropdown)} className='cursor-pointer flex gap-2 items-center'>
                <IoMdPerson className='text-xl' />
                <FaSortDown />
@@ -108,15 +107,9 @@ const Navbar = () => {
                 <MdLogin className='cursor-pointer text-2xl'/>
             </NavLink> 
             }
-            
             <NavLink to="/cart">
                 <FaShoppingCart className='text-2xl cursor-pointer'/>
             </NavLink>
-              
-          
-          
-
-          
           </div>
           </div>
           </Container>
