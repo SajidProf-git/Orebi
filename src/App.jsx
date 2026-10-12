@@ -6,6 +6,7 @@ import RootLayout from './components/layout/RootLayout'
 import ErrorIndex from './components/common/ErrorIndex';
 import Loginindex from './pages/login/Loginindex';
 import Cartindex from './pages/cart/Cartindex';
+import Registration from './pages/registration/Registration';
 
 
 
@@ -16,6 +17,7 @@ const routes = createRoutesFromElements(
    <Route path='/shop' element={<ShopIndex/>} />
    <Route path='/cart' element={<Cartindex/>} />
    <Route path='/login' element={<Loginindex/>}/>
+   <Route path='/registration' element={<Registration/>}/>
   </Route>
     <Route path='*' element={<ErrorIndex/>} />
   </Route>

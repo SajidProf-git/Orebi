@@ -10,52 +10,49 @@ const Loginindex = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
-  })
+  });
   const [errors, setErrors] = useState ({
     email:'',
     password:''
-  })
+  });
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const handleFormChange = (e)=> {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
-    
+    setErrors((prevErrors) =>({
+      ...prevErrors,
+      [name]: "",
+    }));
+
+
   }
-  const handleLogin = () => {
-    if(!formData.email){
-      setErrors((prevErrors) =>({
-        ...prevErrors,
-        email: 'Email is required'
-      }));
-    }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)){
-      setErrors((prevErrors)=>({
-        ...prevErrors,
-        email:'Please enter a valid email'
-      }));
+  //validate form
+const validateForm = () => {
+  const validationFrrors = {};
+  if (!formData.email.trim()) {
+    validationFrrors.email = "Email is Requered";
+  } else if (!emailRegex.test(formData.email.trim())) {
+    validationFrrors.email = "Please enter a valid email";}
+    if (!formData.password.trim()) {
+      validationFrrors.password = "Password is requered";
+    } else if (formData.password.length < 6) {
+      validationFrrors.password = "Password must be at least 6 characters"
     }
-    else{
-      setErrors((prevErrors)=>({
-        ...prevErrors,
-        email:''
-      }));
-    }
-    if(!formData.password){
-      setErrors((prevErrors) =>({
-        ...prevErrors,
-        password: 'password is required'
-      }));
-    }else{
-      setErrors((prevErrors)=> ({
-        ...prevErrors,
-        password:''
-      }));
-    }
-  }
-  useEffect(() => {
-        console.log(errors)
-  },[errors])
+    return validationFrrors;
+}
+
+
+const handleLogin = (e) => {
+  e.preventDefault();
+  const validationFrrors = validateForm();
+  setErrors(validationFrrors);
+  if (Object.keys(validationFrrors).length > 0) {return; }
+  console.log("Login Data", formData)
+};
 
 
   const titleStyle= `text-[39px] text-black_1 font-bold`
@@ -69,6 +66,7 @@ const Loginindex = () => {
        </div>
        <div className='border-y border-y-gray_4 py-15'>
           <h3 className={titleStyle}>Returning Customer</h3>
+          <form onSubmit={handleLogin} className='mt-10 max-w-[1055px]'>
           <div className='mt-10 max-w-[1055px] flex  gap-70'>
               <div className='flex flex-col'>
                 <label className='font-bold text-base leading-6 text-gray_2'>Email Address</label>
@@ -88,12 +86,13 @@ const Loginindex = () => {
               </div>
           </div>
           <PrimaryButton onClick={handleLogin} label="Login" className="mt-10"/>
+          </form>
        </div>
        <div className='pt-15'>
          <h3 className={titleStyle}>New Customer</h3>
          <Peragraph className="pt-9.5 pb-12.5 max-w-[644px]" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
        the industry's standard dummy text ever since the."/>
-       <PrimaryButton label="Continue"/>
+       <PrimaryButton url="/registration" label="Continue"/>
        </div>
     </div>
     </Container>
