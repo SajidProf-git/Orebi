@@ -20,7 +20,7 @@ const Registration = () => {
        <div className='border-y border-y-gray_4 py-15'>
           <h3 className={titleStyle}>Your Personal Details</h3>
           <div className='mt-10 max-w-[1055px]'>
-          <div className='mt-10 max-w-[1055px] flex gap-5'>
+          <div className='mt-10 max-w-[1055px] grid grid-cols-2 gap-10'>
              <div className='flex flex-col'>
                 <label className='font-bold text-base leading-6 text-gray_2'>First Name</label>
                 <Input  type="text" placeholder="Enter Your first name" name="first name" className="py-4 taxt-base text-black
@@ -61,7 +61,7 @@ const Registration = () => {
         <div className='border-b py-16'>
           <h3 className={titleStyle}>New Customer</h3>
           <div className='mt-10 max-w-[1055px]'>
-          <div className='mt-10 max-w-[1055px] flex gap-5'>
+          <div className='mt-10 max-w-[1055px] grid grid-cols-2 gap-5'>
             <div className='flex flex-col'>
                 <label className='font-bold text-base leading-6 text-gray_2'>Current Address</label>
                 <Input  type="text" placeholder="Enter a place" name="name" className="py-4 taxt-base text-black

@@ -67,7 +67,7 @@ const handleLogin = (e) => {
        <div className='border-y border-y-gray_4 py-15'>
           <h3 className={titleStyle}>Returning Customer</h3>
           <form onSubmit={handleLogin} className='mt-10 max-w-[1055px]'>
-          <div className='mt-10 max-w-[1055px] flex  gap-70'>
+          <div className='mt-10 max-w-[1055px] grid grid-cols-2  gap-10'>
               <div className='flex flex-col'>
                 <label className='font-bold text-base leading-6 text-gray_2'>Email Address</label>
                 <Input onChange={handleFormChange} type="email" placeholder="Enter Your Email" name="email" className="py-4 taxt-base text-black

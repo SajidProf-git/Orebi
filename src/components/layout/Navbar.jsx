@@ -60,7 +60,7 @@ const Navbar = () => {
         </div>
       </Container>
     </nav>
-        <div className='bg-gray_1 py'>
+        <div className='bg-gray_1 py-6'>
           <Container>
           <div className='flex justify-between items-center'>
           <div useref={dropdownRef} className='relative'>
@@ -81,9 +81,9 @@ const Navbar = () => {
           } 
           </div>
           <div className='search w-150 relative'>
-          <input type="text" name='search' className='relative py-4.25 px-5 bg-white w-full h-full font-normal font-dm-sans placeholder:text-[#C4C4C4] ' 
+            <input type="text" name='search' className='relative py-4.25 px-5 bg-white w-full h-full font-normal font-dm-sans placeholder:text-[#C4C4C4] ' 
            placeholder='Search Products'/>
-           <FaSearch className='absolate left-5 text-2xl'/>
+           <FaSearch className=' absolute right-5 top-1/2 -translate-y-1/2 text-2xl'/>
           </div>
           <div className='flex gap-10 items-center'>
             {isLogin ?
