@@ -9,8 +9,8 @@ const data = [
     },
     {
         id: 2,
-        title: "Others",
-        url: "/others",
+        title: "Profile",
+        url: "/profile",
     },
     {
         id: 3,
@@ -29,6 +29,11 @@ const data = [
     },
     {
         id: 6,
+        title:"Others",
+        url:"/others",
+    },
+    {
+        id: 7,
         title: "Logout",
         url: "/logout",
     },

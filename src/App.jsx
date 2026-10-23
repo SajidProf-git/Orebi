@@ -11,6 +11,8 @@ import DashboardIndex from './pages/dashboard/DashboardIndex';
 import DashboardLayout from './components/layout/DashboardLayout';
 import DownloadIndex from './pages/downloads/DownloadIndex';
 import OthersIndex from './pages/others/OthersIndex';
+import ProfileIndex from './pages/profile/ProfileIndex';
+import ContactIndex from './pages/contact/ContactIndex';
 
 
 
@@ -25,9 +27,11 @@ const routes = createRoutesFromElements(
    <Route path='/registration' element={<Registration/>}/>
    <Route element={<DashboardLayout/>}>
        <Route path='/dashboard' element={<DashboardIndex/>}/>
+       <Route path='/profile' element={<ProfileIndex/>}/>
        <Route path='/download' element={<DownloadIndex/>}/>
        <Route path='/others' element={<OthersIndex/>}/>
    </Route>
+   <Route path='/contact' element={<ContactIndex/>}/>
   </Route>
     <Route path='*' element={<ErrorIndex/>} />
   </Route>
