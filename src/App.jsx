@@ -13,6 +13,7 @@ import DownloadIndex from './pages/downloads/DownloadIndex';
 import OthersIndex from './pages/others/OthersIndex';
 import ProfileIndex from './pages/profile/ProfileIndex';
 import ContactIndex from './pages/contact/ContactIndex';
+import CheckoutIndex from './pages/checkout/CheckoutIndex';
 
 
 
@@ -31,7 +32,8 @@ const routes = createRoutesFromElements(
        <Route path='/download' element={<DownloadIndex/>}/>
        <Route path='/others' element={<OthersIndex/>}/>
    </Route>
-   <Route path='/contact' element={<ContactIndex/>}/>
+   <Route path='/contacts' element={<ContactIndex/>}/>
+   <Route path='/checkout' element={<CheckoutIndex/>}/>
   </Route>
     <Route path='*' element={<ErrorIndex/>} />
   </Route>

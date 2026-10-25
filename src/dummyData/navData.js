@@ -23,8 +23,8 @@ export const NavData = [
   },
 {
     id: 5,
-    label: "Journal",
-    url: "/journal"
+    label: "Checkout",
+    url: "/checkout"
   }, 
 ]
 
