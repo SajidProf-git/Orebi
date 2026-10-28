@@ -14,6 +14,7 @@ import OthersIndex from './pages/others/OthersIndex';
 import ProfileIndex from './pages/profile/ProfileIndex';
 import ContactIndex from './pages/contact/ContactIndex';
 import CheckoutIndex from './pages/checkout/CheckoutIndex';
+import AboutIndex from './pages/about/AboutIndex';
 
 
 
@@ -23,6 +24,7 @@ const routes = createRoutesFromElements(
   <Route element={<RootLayout/>}>
     <Route index element={<HomeIndex/>} />
    <Route path='/shop' element={<ShopIndex/>} />
+   <Route path='/about' element={<AboutIndex/>} />
    <Route path='/cart' element={<Cartindex/>} />
    <Route path='/login' element={<Loginindex/>}/>
    <Route path='/registration' element={<Registration/>}/>

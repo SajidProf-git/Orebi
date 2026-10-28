@@ -39,7 +39,7 @@ const Banner = () => {
     speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     beforeChange: (current, next) => setDotActive(next),
     appendDots: dots => (
