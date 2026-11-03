@@ -70,7 +70,7 @@ const Navbar = () => {
              <HiMiniBars3BottomLeft onClick={()=>setShowDropdown(!showDropdown)} className='text-2xl cursor-pointer'/>
             }
           {showDropdown &&
-            <div className='bg-white shadow-2x1 absolute left-0 -bottom-80 -translat-y-full w-50'>
+            <div className='bg-white shadow-2x1 absolute left-0 -bottom-80 -translat-y-full w-50 z-50'>
             <ul>
               {[0,1,2,3,4,5].map((item,index)=>(
                 <li key={index} className='px-5 py-3 cursor-pointer border-b last-border-b-0'>Category 1</li>
@@ -93,7 +93,7 @@ const Navbar = () => {
                <FaSortDown />
               </div>
              {showProfileDropdown &&
-                <div className='w-32 bg-white absulate bottom-0 left-0 translate-y-full shadow'>
+                <div className='w-32 bg-white absulate bottom-0 left-0 translate-y-full shadow z-50'>
                 {profileDropdownData.map((item,index)=>(
                   <NavLink key={item.id} to={item.url} className='px-5 py-3 block cursor-pointer border-b last-border-b-0'>
                   {item.label}

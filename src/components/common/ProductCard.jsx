@@ -25,24 +25,25 @@ const ProductCard = ({ name, img, price, category, isNew = false, isDiscount = f
 
         <div className="bg-white px-6 py-4 w-full absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-all duration-300 flex flex-col gap-2">
           {/* Action buttons */}
-          <button className="flex justify-between items-center text-gray-600 hover:text-black font-medium">
+          <button className="flex justify-end gap-2 items-center text-gray-600 hover:text-black font-medium">
             Add to wishlist <FaHeart />
           </button>
-          <button className="flex justify-between items-center text-gray-600 hover:text-black font-medium">
+          <button className="flex justify-end gap-2 items-center text-gray-600 hover:text-black font-medium">
             Compare <IoMdGitCompare />
           </button>
-          <button className="flex justify-between items-center text-gray-600 hover:text-black font-bold">
+          <button className="flex justify-end gap-2 items-center text-gray-600 hover:text-black font-bold">
             Add to Cart <FaShoppingCart />
           </button>
         </div>
       </div>
-
+      <div>
       <div className="flex justify-between items-center mt-4">
         <h5 className="font-bold text-lg text-black">{name}</h5>
         <span className="font-semibold text-gray-700">{price}</span>
       </div>
       
       <h6 className="mt-1 text-gray-500">{category}</h6>
+      </div>
     </div>
   );
 };
