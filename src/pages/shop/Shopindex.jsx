@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Container from '../../components/common/Container';
 import ProductCard from '../../components/common/ProductCard';
+import BreadCrumb from '../../components/common/BreadCrumb';
 
 import Product1 from '../../assets/images/product_1.jpg';
 import Product2 from '../../assets/images/product_2.jpg';
@@ -45,6 +46,9 @@ const Shopindex = () => {
     return (
         <section className="py-12">
             <Container>
+                <div className='py-18'>
+                <BreadCrumb pageLabel="Products" rootpage="Home"/>
+                </div>
                 <div className="flex flex-col lg:flex-row gap-8">
                     
                     {/* LEFT SIDEBAR */}
